@@ -16,7 +16,13 @@ func main() {
 	numberOfHouses := 5
 	for i := 1; i <= numberOfHouses; i++ {
 		fmt.Println("Drawing house", i)
+
+		// draw the house
 		drawHouse(canvas)
+
+		// move to the right so we can draw the next house
+		canvas.Move(drawing.Right, 9)
+		canvas.Turn(drawing.Left)
 	}
 
 	fmt.Println("Name the file:")
@@ -26,7 +32,7 @@ func main() {
 		return
 	}
 
-	canvas.SaveImage(fileName)
+	canvas.SaveImage(fileName + ".jpeg")
 }
 
 func drawHouse(canvas *drawing.Canvas) {
@@ -41,6 +47,5 @@ func drawHouse(canvas *drawing.Canvas) {
 	canvas.DrawTriangle(drawing.Blue, 5)
 
 	canvas.Move(drawing.Backwards, 5)
-	canvas.Move(drawing.Left, 9)
-	canvas.Turn(drawing.Left)
+	canvas.Turn(drawing.Backwards)
 }
