@@ -15,5 +15,5 @@ func main() {
 	canvas.DrawRectangle(drawing.Red, 5, 5)
 	canvas.DrawTriangle(drawing.Blue, 5)
 
-	canvas.SaveImage("img.png")
+	canvas.SaveImage("img.jpeg")
 }
