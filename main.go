@@ -21,6 +21,11 @@ func main() {
 
 	fmt.Println("Name the file:")
 	fileName := easyinput.TakeInput()
+	if fileName == "" {
+		fmt.Println("Must provide a filename!")
+		return
+	}
+
 	canvas.SaveImage(fileName)
 }
 
