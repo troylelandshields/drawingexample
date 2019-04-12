@@ -21,7 +21,7 @@ func main() {
 		drawHouse(canvas)
 
 		// move to the right so we can draw the next house
-		canvas.Move(drawing.Right, 9)
+		canvas.Move(drawing.Right, 4)
 		canvas.Turn(drawing.Left)
 	}
 
@@ -51,7 +51,8 @@ func drawHouse(canvas *drawing.Canvas) {
 	// draw blue roof
 	canvas.DrawTriangle(drawing.Blue, 5)
 
-	// move to lower-left corner of house
+	// move to lower-right corner of the house and face up
 	canvas.Move(drawing.Backwards, 5)
-	canvas.Turn(drawing.Backwards)
+	canvas.Move(drawing.Left, 5)
+	canvas.Turn(drawing.Left)
 }
