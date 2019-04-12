@@ -37,15 +37,21 @@ func main() {
 
 func drawHouse(canvas *drawing.Canvas) {
 	canvas.Move(drawing.Straight, 2)
+
+	// draw green door
 	canvas.DrawRectangle(drawing.Green, 1, 2)
 	canvas.Move(drawing.Backwards, 2)
 
 	canvas.Move(drawing.Right, 3)
 	canvas.Move(drawing.Right, 5)
 
+	// draw red frame
 	canvas.DrawRectangle(drawing.Red, 5, 5)
+
+	// draw blue roof
 	canvas.DrawTriangle(drawing.Blue, 5)
 
+	// move to lower-left corner of house
 	canvas.Move(drawing.Backwards, 5)
 	canvas.Turn(drawing.Backwards)
 }
